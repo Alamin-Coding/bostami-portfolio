@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+ .hover_active{
+  @apply bg-gradient-to-r from-[#FA5252] to-[#DD2476]
+ }
+}
+@layer utilities {
+ .active{
+  @apply bg-gradient-to-r from-[#FA5252] to-[#DD2476] text-slate-50
+ }
+}
