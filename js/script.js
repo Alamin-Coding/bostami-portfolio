@@ -1,6 +1,7 @@
 $(function() {
  "use strict"
- let darkmode = document.querySelector(".darkmode");
+// Dark mode start
+let darkmode = document.querySelector(".darkmode");
 let html = document.querySelector("html");
 let light_icon = document.querySelector(".light_icon");
 let dark_icon = document.querySelector(".dark_icon");
@@ -25,22 +26,33 @@ function handleDarkMode() {
 }
 
 darkmode.addEventListener("click", handleDarkMode)
-
+// Dark mode end ===================
 
 // Menu start
 const menu = document.querySelectorAll(".menu li a");
 const menuArr = Array.from(menu);
-
+const tab_itemArray = Array.from(document.querySelectorAll(".tab_item"));
 // let bgStyle = "linear-gradient(to-right, red, blue)"
 
-menuArr.map( (menu) => {
+menuArr.map( (menu, index) => {
  menu.addEventListener("click", (e) => {
+  console.log(index);
   menuArr.map(item => {
-   item.classList.remove("active")
+   item.classList.remove("active");
   })
-  e.currentTarget.classList.add("active")
+  e.currentTarget.classList.add("active");
+
+  tab_itemArray.map( (item, i) => {
+   item.classList.add("hidden");
+  } )
+  tab_itemArray[index].classList.remove("hidden")
+
  })
 } )
+
+// Tab item function create
+
+
 
 // Side menu start
 // const bars = document.querySelector(".bars");
@@ -58,24 +70,26 @@ const handleActiveMenu = (e) => {
  sideMenusArray.map(item => {
   item.classList.remove("active")
  })
- e.currentTarget.classList.add("active")
+ e.currentTarget.classList.add("active");
 }
 
 sideMenusArray.map((menu) => {
  menu.addEventListener("click", handleActiveMenu)
 })
 
-console.log($(".bars"));
 $(".bars").click(function(e){
  console.log(123);
  $(".side_menu").slideToggle(300)
 })
-
-
 // Side menu end
 
+// Tab item start
+const tab_items = document.querySelectorAll(".tab_item");
 
-// Menu end
+// Tab item end
+
+
+// Menu end ===============
 
 // New date
 let currentYear = new Date().getFullYear()
