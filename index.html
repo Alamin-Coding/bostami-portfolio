@@ -1,249 +1,522 @@
 <!DOCTYPE html>
 <html lang="en" class="">
-<head>
- <meta charset="UTF-8">
- <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <!-- Font awesome CDN start -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- <!-- Font awesome CDN end -->
- <link rel="stylesheet" href="./css/slick.css">
- <link rel="stylesheet" href="./css/style.css">
- <title>Tailwind css</title>
-</head>
-<body class="bg-image-light dark:bg-image-dark bg-center bg-cover bg-no-repeat bg-fixed">
- 
- <!-- Navbar part start -->
- <nav class=" py-5 md:py-12 bg-black md:bg-transparent ">
-  <div class="container grid grid-cols-[auto_1fr] justify-between items-center">
-    <div>
-      <a href="#">
-       <img src="./images/logo.png" alt=" website logo">
-      </a>
-     </div>
-     <div class="text-right">
-      <span class="inline-flex items-center justify-center darkmode w-10 h-10 rounded-full cursor-pointer bg-slate-100 hover:bg-primary hover:text-slate-50 text-2xl">
-       <svg class="light_icon" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-3xl dark-mode-light dark:hidden" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-       <!-- Dark icon -->
-       <svg class="dark_icon" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="text-2xl dark-mode-dark hidden fill-jacarta-700 group-hover:fill-white group-focus:fill-white dark:block dark:fill-white " height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-      </span>
-     </div>
- </nav>
- <!-- Navbar part end -->
-
- <!-- Side bar start -->
- <main>
-  <section class="mt-40">
-    <div class="container grid grid-cols-12 gap-10 ">
-      <!-- Sidebar start -->
-      <div class="col-span-12 md:col-span-4">
-        <div class="bg-slate-100 dark:bg-[#111111] rounded-2xl mt-10 mb-10 py-10  md:sticky top-40 left-0 ">
-          <div class="overflow-hidden rounded-lg -mt-48 text-center w-60 h-60 m-auto">
-            <img src="./images/profile.jpg" alt="Profile image">
-          </div>
-          <div class="text-center">
-            <h2 class="mt-6 mb-1 text-4xl font-semibold dark:text-white">Monalisa Ashley</h2>
-            <h1 class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6] ">Ui/Ux Designer</h1>
-          </div>
-          <div class="flex justify-center space-x-3">
-            <a href="#" class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-mid-dark hover:hover_active text-[#1773EA] hover:text-slate-50">
-              <i class="fa-brands fa-facebook-f"></i>
-            </a>
-            <a href="#" class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-mid-dark hover:hover_active text-[#1C9CEA] hover:text-slate-50">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-            <a href="#" class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-mid-dark hover:hover_active text-[#e14a84] hover:text-slate-50">
-              <i class="fa-brands fa-dribbble"></i>
-            </a>
-            <a href="#" class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-mid-dark hover:hover_active text-[#0072b1] hover:text-slate-50">
-              <i class="fa-brands fa-linkedin-in"></i>
-            </a>
-          </div>
-          <ul class="flex flex-col bg-light-gray dark:bg-mid-dark px-7 py-8 rounded-2xl mt-10 ">
-            <li class="flex items-center gap-6 border-b border-slate-300 py-3">
-              <div class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-[#111111] hover:hover_active group cursor-pointer">
-                <i class="fa-solid fa-mobile-screen text-pink-600 text-2xl group-hover:text-slate-50"></i>
-              </div>
-              <div class="flex flex-col dark:text-white">
-                <span class="text-slate-500 text-xs font-bold">Phone</span>
-                <a class="transition-all duration-100 hover:text-primary" href="tel:+8801616639307">+123 456 7890</a>
-              </div>
-            </li>
-            <li class="flex items-center gap-6 border-b border-slate-300 py-3">
-              <div class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-black text-[#6AB5B9] hover:hover_active group cursor-pointer text-xl">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
-              <div class="flex flex-col dark:text-white">
-                <span class="text-slate-500 text-xs font-bold">Location</span>
-                <span class="transition-all duration-100">Hong kong china</span>
-              </div>
-            </li>
-            <li class="flex items-center gap-6 border-b border-slate-300 py-3">
-              <div class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-black text-[#FD7590] hover:hover_active group cursor-pointer text-xl">
-                <i class="fa-solid fa-envelope-open-text"></i>
-              </div>
-              <div class="flex flex-col dark:text-white">
-                <span class="text-slate-500 text-xs font-bold">Email</span>
-                <a class="transition-all duration-100 hover:text-primary" href="mailto:example@mail.com">example@mail.com</a>
-              </div>
-            </li>
-            <li class="flex items-center gap-6 py-3">
-              <div class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-black text-[#C17CEB] hover:hover_active group cursor-pointer text-xl">
-                <i class="fa-solid fa-calendar-days"></i>
-              </div>
-              <div class="flex flex-col dark:text-white">
-                <span class="text-slate-500 text-xs font-bold">Birthday</span>
-                <span class="transition-all duration-100 hover:text-primary">May 27, 1990</span>
-              </div>
-            </li>
-          </ul>
-          <div class="text-center mt-10">
-            <a href="/images/cv.pdf" class="inline-block rounded-[60px] bg-gradient-to-r from-[#FA5252] to-[#DD2476] py-3 px-6 text-slate-50">
-              <i class="fa-solid fa-download"></i>
-              Download CV
-            </a>
-          </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font awesome CDN start -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Font awesome CDN end -->
+    <link rel="stylesheet" href="./css/slick.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Bostami - Creative Personal Portfolio</title>
+  </head>
+  <body
+    class="bg-image-light dark:bg-image-dark bg-center bg-cover bg-no-repeat bg-fixed"
+  >
+    <!-- Navbar part start -->
+    <nav class="py-5 lg:py-12 bg-gray-100 dark:bg-black lg:bg-transparent">
+      <div
+        class="container grid grid-cols-[auto_1fr] justify-between items-center"
+      >
+        <div>
+          <a href="#">
+            <img src="./images/logo.png" alt=" website logo" />
+          </a>
+        </div>
+        <div class="text-right flex items-center justify-end gap-3">
+          <span
+            class="inline-flex items-center justify-center darkmode w-10 h-10 rounded-full cursor-pointer bg-slate-100 hover:bg-primary hover:text-slate-50 text-2xl"
+          >
+            <svg
+              class="light_icon"
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-3xl dark-mode-light dark:hidden"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <!-- Dark icon -->
+            <svg
+              class="dark_icon"
+              stroke="currentColor"
+              fill="none"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="text-2xl dark-mode-dark hidden fill-jacarta-700 group-hover:fill-white group-focus:fill-white dark:block dark:fill-white"
+              height="1em"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </span>
+          <span
+            class="bars lg:hidden w-10 h-10 rounded-full bg-primary text-slate-50 inline-flex items-center justify-center cursor-pointer"
+          >
+            <i class="fas fa-bars"></i>
+          </span>
         </div>
       </div>
-      <!-- Sidebar end -->
-      <div class="col-span-12 md:col-span-8 rounded-2xl">
-        <!-- Menu start -->
-        <div class="text-right -mt-10">
-          <ul class=" md:inline-flex gap-4 py-6 px-10 rounded-3xl bg-slate-50 dark:bg-black menu">
-            <li>
-              <a href="#" class="text-slate-900 w-20 hover:text-slate-50 text-1xl py-4 rounded-xl flex items-center flex-col justify-center  hover:hover_active bg-light-gray active ">
-                <i class="fa-solid fa-house"></i>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-slate-900 w-20 hover:text-slate-50 text-1xl py-4 rounded-xl flex items-center flex-col justify-center bg-light-gray hover:hover_active  ">
-                <i class="fa-regular fa-file-lines"></i>
-                Resume
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-slate-900 w-20 hover:text-slate-50 text-1xl py-4 rounded-xl flex items-center flex-col justify-center bg-light-gray hover:hover_active  ">
-                <i class="fa-brands fa-hive"></i>
-                Works
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-slate-900 w-20 hover:text-slate-50 text-1xl py-4 rounded-xl flex items-center flex-col justify-center bg-light-gray hover:hover_active  ">
-                <i class="fa-brands fa-blogger"></i>
-                Blogs
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-slate-900 w-20 hover:text-slate-50 text-1xl py-4 rounded-xl flex items-center flex-col justify-center bg-light-gray hover:hover_active  ">
-                <i class="fa-regular fa-address-book"></i>
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!-- Menu end -->
-        <div class="bg-slate-50 dark:bg-[#111111] rounded-xl mb-14">
-          <div class="pt-16 px-12 mt-8">
-            <div>
-              <h2 class="text-4xl text-slate-900 dark:text-slate-50 font-bold relative after:contents[] after:w-36 after:h-[2px] after:bg-primary after:absolute after:top-1/2 -translate-y-1/2 after:right-8  after:left-52">About Me</h2>
-              <p class="text-gray-700 dark:text-slate-500 leading-7 font-semibold">I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media. I enjoy turning complex problems into simple, beautiful and intuitive designs.</p>
-              <p class="text-gray-700 dark:text-slate-500 leading-7 font-semibold mt-3">My aim is to bring across your message and identity in the most creative way. I created web design for many famous brand companies.</p>
-
-              <h3 class="text-4xl text-slate-900 dark:text-slate-50 font-semibold pt-6 pb-4">What I do!</h3>
-            </div>
-            <div class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2 ">
-              <div class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5">
-                <div>
-                  <img class="w-28" src="./images/icons/icon-1.svg" alt="icon-1">
-                </div>
-                <div>
-                  <h4 class="dark:text-white text-xl font-semibold">Ui/Ux Design</h4>
-                  <p class=" leading-8 text-gray-lite dark:text-[#A6A6A6]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
-                </div>
-              </div>
-              <div class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5">
-                <div>
-                  <img class="w-28" src="./images/icons/icon-2.svg" alt="icon-2">
-                </div>
-                <div>
-                  <h4 class="dark:text-white text-xl font-semibold">App Development</h4>
-                  <p class=" leading-8 text-gray-lite dark:text-[#A6A6A6]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
-                </div>
-              </div>
-              <div class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5">
-                <div>
-                  <img class="w-28" src="./images/icons/icon-3.svg" alt="icon-3">
-                </div>
-                <div>
-                  <h4 class="dark:text-white text-xl font-semibold">Photography</h4>
-                  <p class=" leading-8 text-gray-lite dark:text-[#A6A6A6]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
-                </div>
-              </div>
-              <div class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5">
-                <div>
-                  <img class="w-28" src="./images/icons/icon-4.svg" alt="icon-4">
-                </div>
-                <div>
-                  <h4 class="dark:text-white text-xl font-semibold">Photography</h4>
-                  <p class=" leading-8 text-gray-lite dark:text-[#A6A6A6]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
-                </div>
-              </div>
-              <div class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5">
-                <div>
-                  <img class="w-28" src="./images/icons/icon-5.svg" alt="icon-5">
-                </div>
-                <div>
-                  <h4 class="dark:text-white text-xl font-semibold">Management</h4>
-                  <p class=" leading-8 text-gray-lite dark:text-[#A6A6A6]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
-                </div>
-              </div>
-              <div class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5">
-                <div>
-                  <img class="w-28" src="./images/icons/icon-6.svg" alt="icon-6">
-                </div>
-                <div>
-                  <h4 class="dark:text-white text-xl font-semibold">Web Development</h4>
-                  <p class=" leading-8 text-gray-lite dark:text-[#A6A6A6]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-4xl text-slate-900 dark:text-slate-50 font-semibold pt-6 pb-4">My Client!</h3>
-              <div class="brand_slider py-6 px-6 rounded-xl dark:bg-black">
-                <div class="slide_item py-4 px-8 rounded-md">
-                  <img src="./images/slide-item-1.png" alt="image">
-                </div>
-                <div class="slide_item py-4 px-8 rounded-md">
-                  <img src="./images/slide-item-2.png" alt="image">
-                </div>
-                <div class="slide_item py-4 px-8 rounded-md">
-                  <img src="./images/slide-item-3.png" alt="image">
-                </div>
-                <div class="slide_item py-4 px-8 rounded-md">
-                  <img src="./images/slide-item-4.png" alt="image">
-                </div>
-                <div class="slide_item py-4 px-8 rounded-md">
-                  <img src="./images/slide-item-1.png" alt="image">
-                </div>
-                <div class="slide_item py-4 px-8 rounded-md">
-                  <img src="./images/slide-item-2.png" alt="image">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="dark:bg-black p-6 text-center mt-8 rounded-br-xl rounded-bl-xl">
-            <p class="text-slate-800 dark:text-slate-50">&#169; <span id="year"></span> All Rights Reserved by ib-themes.</p>
-          </div>
-        </div>
-      </div>
-      <!-- Sidebar end -->
+    </nav>
+    <!-- Side menu start -->
+    <div
+      class="side_menu bg-slate-50 dark:bg-mid-dark rounded-b-2xl py-6 px-4 hidden"
+    >
+      <ul class="grid grid-cols-1 gap-2">
+        <li>
+          <a
+            href="#"
+            class="block p-2 text-slate-900 rounded-md hover:text-slate-50 active dark:text-slate-100"
+          >
+            <i class="fa-solid fa-house"></i>
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block p-2 rounded-md text-slate-900 hover:text-slate-50 hover:hover_active dark:text-slate-100"
+            >Resume</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block p-2 rounded-md text-slate-900 hover:text-slate-50 hover:hover_active dark:text-slate-100"
+            >Works</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block p-2 rounded-md text-slate-900 hover:text-slate-50 hover:hover_active dark:text-slate-100"
+            >Blogs</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block p-2 rounded-md text-slate-900 hover:text-slate-50 hover:hover_active dark:text-slate-100"
+            >Contact</a
+          >
+        </li>
+      </ul>
     </div>
-  </section>
- </main>
- <!-- Side bar end -->
- <script src="./js/jquery-1.12.4.min.js"></script>
- <script src="./js/slick.min.js"></script>
- <script src="./js/script.js"></script>
-</body>
+    <!-- Side menu end -->
+    <!-- Navbar part end -->
+
+    <!-- Side bar start -->
+    <main>
+      <section class="mt-40">
+        <div class="container grid grid-cols-12 lg:gap-10">
+          <!-- Sidebar start -->
+          <div class="col-span-12 lg:col-span-4">
+            <div
+              class="bg-slate-100 dark:bg-[#111111] rounded-2xl mt-10 lg:mb-10 py-10 md:sticky top-40 left-0"
+            >
+              <div
+                class="overflow-hidden rounded-lg -mt-48 text-center w-60 h-60 m-auto"
+              >
+                <img src="./images/profile.jpg" alt="Profile image" />
+              </div>
+              <div class="text-center">
+                <h2 class="mt-6 mb-1 text-4xl font-semibold dark:text-white">
+                  Monalisa Ashley
+                </h2>
+                <h1
+                  class="mb-4 text-[#7B7B7B] inline-block dark:bg-[#1D1D1D] px-5 py-1.5 rounded-lg dark:text-[#A6A6A6]"
+                >
+                  Ui/Ux Designer
+                </h1>
+              </div>
+              <div class="flex justify-center space-x-3">
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-mid-dark hover:hover_active text-[#1773EA] hover:text-slate-50"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-mid-dark hover:hover_active text-[#1C9CEA] hover:text-slate-50"
+                >
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-mid-dark hover:hover_active text-[#e14a84] hover:text-slate-50"
+                >
+                  <i class="fa-brands fa-dribbble"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-mid-dark hover:hover_active text-[#0072b1] hover:text-slate-50"
+                >
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </div>
+              <ul
+                class="flex flex-col bg-light-gray dark:bg-mid-dark px-7 py-8 rounded-2xl mt-10"
+              >
+                <li
+                  class="flex items-center gap-6 border-b border-slate-300 py-3"
+                >
+                  <div
+                    class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-[#111111] hover:hover_active group cursor-pointer"
+                  >
+                    <i
+                      class="fa-solid fa-mobile-screen text-pink-600 text-2xl group-hover:text-slate-50"
+                    ></i>
+                  </div>
+                  <div class="flex flex-col dark:text-white">
+                    <span class="text-slate-500 text-xs font-bold">Phone</span>
+                    <a
+                      class="transition-all duration-100 hover:text-primary"
+                      href="tel:+8801616639307"
+                      >+123 456 7890</a
+                    >
+                  </div>
+                </li>
+                <li
+                  class="flex items-center gap-6 border-b border-slate-300 py-3"
+                >
+                  <div
+                    class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-black text-[#6AB5B9] hover:hover_active group cursor-pointer text-xl"
+                  >
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="flex flex-col dark:text-white">
+                    <span class="text-slate-500 text-xs font-bold"
+                      >Location</span
+                    >
+                    <span class="transition-all duration-100"
+                      >Hong kong china</span
+                    >
+                  </div>
+                </li>
+                <li
+                  class="flex items-center gap-6 border-b border-slate-300 py-3"
+                >
+                  <div
+                    class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-black text-[#FD7590] hover:hover_active group cursor-pointer text-xl"
+                  >
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                  </div>
+                  <div class="flex flex-col dark:text-white">
+                    <span class="text-slate-500 text-xs font-bold">Email</span>
+                    <a
+                      class="transition-all duration-100 hover:text-primary"
+                      href="mailto:example@mail.com"
+                      >example@mail.com</a
+                    >
+                  </div>
+                </li>
+                <li class="flex items-center gap-6 py-3">
+                  <div
+                    class="w-10 h-10 rounded bg-light-gray flex items-center justify-center shadow-md dark:bg-black text-[#C17CEB] hover:hover_active group cursor-pointer text-xl"
+                  >
+                    <i class="fa-solid fa-calendar-days"></i>
+                  </div>
+                  <div class="flex flex-col dark:text-white">
+                    <span class="text-slate-500 text-xs font-bold"
+                      >Birthday</span
+                    >
+                    <span class="transition-all duration-100 hover:text-primary"
+                      >May 27, 1990</span
+                    >
+                  </div>
+                </li>
+              </ul>
+              <div class="text-center mt-10">
+                <a
+                  href="/images/cv.pdf"
+                  class="inline-block rounded-[60px] bg-gradient-to-r from-[#FA5252] to-[#DD2476] py-3 px-6 text-slate-50"
+                >
+                  <i class="fa-solid fa-download"></i>
+                  Download CV
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Sidebar end -->
+
+          <div class="col-span-12 lg:col-span-8 rounded-2xl">
+            <!-- Menu start -->
+            <div class="text-right -mt-10 hidden lg:block">
+              <ul
+                class="md:inline-flex gap-4 py-6 px-10 rounded-3xl bg-slate-50 dark:bg-black menu"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="text-slate-900 w-20 hover:text-slate-50 text-1xl py-4 rounded-xl flex items-center flex-col justify-center hover:hover_active bg-light-gray dark:bg-mid-dark dark:text-slate-100 active"
+                  >
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-slate-900 w-20 hover:text-slate-50 text-1xl py-4 rounded-xl flex items-center flex-col justify-center bg-light-gray dark:bg-mid-dark dark:text-slate-100 hover:hover_active"
+                  >
+                    <i class="fa-regular fa-file-lines"></i>
+                    Resume
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-slate-900 w-20 hover:text-slate-50 text-1xl py-4 rounded-xl flex items-center flex-col justify-center bg-light-gray dark:bg-mid-dark dark:text-slate-100 hover:hover_active"
+                  >
+                    <i class="fa-brands fa-hive"></i>
+                    Works
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-slate-900 w-20 hover:text-slate-50 text-1xl py-4 rounded-xl flex items-center flex-col justify-center bg-light-gray dark:bg-mid-dark dark:text-slate-100 hover:hover_active"
+                  >
+                    <i class="fa-brands fa-blogger"></i>
+                    Blogs
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-slate-900 w-20 hover:text-slate-50 text-1xl py-4 rounded-xl flex items-center flex-col justify-center bg-light-gray dark:bg-mid-dark dark:text-slate-100 hover:hover_active"
+                  >
+                    <i class="fa-regular fa-address-book"></i>
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- Menu end -->
+            <div class="bg-slate-50 dark:bg-[#111111] rounded-xl mb-14">
+              <div class="pt-16 px-12 mt-8">
+                <div>
+                  <h2
+                    class="text-4xl text-slate-900 dark:text-slate-50 font-bold relative after:contents[] after:w-36 after:h-[2px] after:bg-primary after:absolute after:top-1/2 -translate-y-1/2 after:right-8 after:left-52"
+                  >
+                    About Me
+                  </h2>
+                  <p
+                    class="text-gray-700 dark:text-slate-500 leading-7 font-semibold"
+                  >
+                    I'm Creative Director and UI/UX Designer from Sydney,
+                    Australia, working in web development and print media. I
+                    enjoy turning complex problems into simple, beautiful and
+                    intuitive designs.
+                  </p>
+                  <p
+                    class="text-gray-700 dark:text-slate-500 leading-7 font-semibold mt-3"
+                  >
+                    My aim is to bring across your message and identity in the
+                    most creative way. I created web design for many famous
+                    brand companies.
+                  </p>
+
+                  <h3
+                    class="text-4xl text-slate-900 dark:text-slate-50 font-semibold pt-6 pb-4"
+                  >
+                    What I do!
+                  </h3>
+                </div>
+                <div
+                  class="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-2"
+                >
+                  <div
+                    class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5"
+                  >
+                    <div>
+                      <img
+                        class="w-28"
+                        src="./images/icons/icon-1.svg"
+                        alt="icon-1"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="dark:text-white text-xl font-semibold">
+                        Ui/Ux Design
+                      </h4>
+                      <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam euismod volutpat.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5"
+                  >
+                    <div>
+                      <img
+                        class="w-28"
+                        src="./images/icons/icon-2.svg"
+                        alt="icon-2"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="dark:text-white text-xl font-semibold">
+                        App Development
+                      </h4>
+                      <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam euismod volutpat.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5"
+                  >
+                    <div>
+                      <img
+                        class="w-28"
+                        src="./images/icons/icon-3.svg"
+                        alt="icon-3"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="dark:text-white text-xl font-semibold">
+                        Photography
+                      </h4>
+                      <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam euismod volutpat.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5"
+                  >
+                    <div>
+                      <img
+                        class="w-28"
+                        src="./images/icons/icon-4.svg"
+                        alt="icon-4"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="dark:text-white text-xl font-semibold">
+                        Photography
+                      </h4>
+                      <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam euismod volutpat.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5"
+                  >
+                    <div>
+                      <img
+                        class="w-28"
+                        src="./images/icons/icon-5.svg"
+                        alt="icon-5"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="dark:text-white text-xl font-semibold">
+                        Management
+                      </h4>
+                      <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam euismod volutpat.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="p-4 rounded-md border border-slate-200 dark:border-slate-800 flex gap-5"
+                  >
+                    <div>
+                      <img
+                        class="w-28"
+                        src="./images/icons/icon-6.svg"
+                        alt="icon-6"
+                      />
+                    </div>
+                    <div>
+                      <h4 class="dark:text-white text-xl font-semibold">
+                        Web Development
+                      </h4>
+                      <p class="leading-8 text-gray-lite dark:text-[#A6A6A6]">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing
+                        elit, sed diam euismod volutpat.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3
+                    class="text-4xl text-slate-900 dark:text-slate-50 font-semibold pt-6 pb-4"
+                  >
+                    My Client!
+                  </h3>
+                  <div class="brand_slider py-6 px-6 rounded-xl dark:bg-black">
+                    <div class="slide_item py-4 px-8 rounded-md">
+                      <img src="./images/slide-item-1.png" alt="image" />
+                    </div>
+                    <div class="slide_item py-4 px-8 rounded-md">
+                      <img src="./images/slide-item-2.png" alt="image" />
+                    </div>
+                    <div class="slide_item py-4 px-8 rounded-md">
+                      <img src="./images/slide-item-3.png" alt="image" />
+                    </div>
+                    <div class="slide_item py-4 px-8 rounded-md">
+                      <img src="./images/slide-item-4.png" alt="image" />
+                    </div>
+                    <div class="slide_item py-4 px-8 rounded-md">
+                      <img src="./images/slide-item-1.png" alt="image" />
+                    </div>
+                    <div class="slide_item py-4 px-8 rounded-md">
+                      <img src="./images/slide-item-2.png" alt="image" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="dark:bg-black p-6 text-center mt-8 rounded-br-xl rounded-bl-xl"
+              >
+                <p class="text-slate-800 dark:text-slate-50">
+                  &#169; <span id="year"></span> All Rights Reserved by
+                  ib-themes.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Sidebar end -->
+        </div>
+      </section>
+    </main>
+    <!-- Side bar end -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

@@ -31,17 +31,50 @@ darkmode.addEventListener("click", handleDarkMode)
 const menu = document.querySelectorAll(".menu li a");
 const menuArr = Array.from(menu);
 
-let bgStyle = "linear-gradient(to-right, red, blue)"
+// let bgStyle = "linear-gradient(to-right, red, blue)"
 
 menuArr.map( (menu) => {
  menu.addEventListener("click", (e) => {
   menuArr.map(item => {
    item.classList.remove("active")
   })
-  console.log(e.currentTarget);
   e.currentTarget.classList.add("active")
  })
 } )
+
+// Side menu start
+// const bars = document.querySelector(".bars");
+// const side_menu = document.querySelector(".side_menu");
+// const handleSideMenu = () => {
+//  alert("side menu")
+// }
+
+// bars.addEventListener("click", handleSideMenu);
+
+const sideMenus = document.querySelectorAll(".side_menu ul li a");
+const sideMenusArray = Array.from(sideMenus);
+
+const handleActiveMenu = (e) => {
+ sideMenusArray.map(item => {
+  item.classList.remove("active")
+ })
+ e.currentTarget.classList.add("active")
+}
+
+sideMenusArray.map((menu) => {
+ menu.addEventListener("click", handleActiveMenu)
+})
+
+console.log($(".bars"));
+$(".bars").click(function(e){
+ console.log(123);
+ $(".side_menu").slideToggle(300)
+})
+
+
+// Side menu end
+
+
 // Menu end
 
 // New date
@@ -56,7 +89,27 @@ $(".brand_slider").slick({
  slidesToScroll: 1,
  autoplay: true,
  autoplaySpeed: 3000,
- speed: 2000
+ speed: 2000,
+ responsive: [
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 4,
+    }
+  },
+  {
+    breakpoint: 600,
+    settings: {
+      slidesToShow: 3,
+    }
+  },
+  {
+    breakpoint: 480,
+    settings: {
+      slidesToShow: 2,
+    }
+  }
+]
 })
 
 
