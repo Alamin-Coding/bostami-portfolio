@@ -32,59 +32,77 @@ darkmode.addEventListener("click", handleDarkMode)
 const menu = document.querySelectorAll(".menu li a");
 const menuArr = Array.from(menu);
 const tab_itemArray = Array.from(document.querySelectorAll(".tab_item"));
+const sideMenusArray = Array.from(document.querySelectorAll(".side_menu ul li a"));
+const Home_info = document.querySelector(".Home_info");
+const main_section = document.querySelector(".main_section");
 // let bgStyle = "linear-gradient(to-right, red, blue)"
+
+// Tab item active function
+const tabItemActive = (index) => {
+  tab_itemArray.map( (item, i) => {
+    item.classList.add("hidden");
+   } )
+   tab_itemArray[index].classList.remove("hidden");
+
+}
+
+
 
 menuArr.map( (menu, index) => {
  menu.addEventListener("click", (e) => {
-  console.log(index);
   menuArr.map(item => {
    item.classList.remove("active");
   })
-  e.currentTarget.classList.add("active");
-
-  tab_itemArray.map( (item, i) => {
-   item.classList.add("hidden");
-  } )
-  tab_itemArray[index].classList.remove("hidden")
-
- })
+    e.currentTarget.classList.add("active");
+  })
+  tabItemActive(index)
 } )
 
-// Tab item function create
 
 
 
-// Side menu start
-// const bars = document.querySelector(".bars");
-// const side_menu = document.querySelector(".side_menu");
-// const handleSideMenu = () => {
-//  alert("side menu")
-// }
 
-// bars.addEventListener("click", handleSideMenu);
 
-const sideMenus = document.querySelectorAll(".side_menu ul li a");
-const sideMenusArray = Array.from(sideMenus);
-
-const handleActiveMenu = (e) => {
- sideMenusArray.map(item => {
-  item.classList.remove("active")
- })
- e.currentTarget.classList.add("active");
-}
-
-sideMenusArray.map((menu) => {
- menu.addEventListener("click", handleActiveMenu)
+sideMenusArray.map((menu, index) => {
+ menu.addEventListener("click", (e) => {
+  $(".side_menu").slideToggle(300)
+  sideMenusArray.map(item => {
+   item.classList.remove("active")
+  })
+  e.currentTarget.classList.add("active");
+  tabItemActive(index);
+  if (index === 0) {
+    Home_info.classList.remove("hidden");
+    main_section.classList.add("mt-40");
+   }
+  if (index === 1) {
+    Home_info.classList.add("hidden");
+    main_section.classList.remove("mt-40");
+   }
+  if (index === 2) {
+    Home_info.classList.add("hidden");
+    main_section.classList.remove("mt-40");
+   }
+  if (index === 3) {
+    Home_info.classList.add("hidden");
+    main_section.classList.remove("mt-40");
+   }
+  if (index === 4) {
+    Home_info.classList.add("hidden");
+    main_section.classList.remove("mt-40");
+   }
+   
+  console.log(index);
+ } );
+ 
 })
 
 $(".bars").click(function(e){
- console.log(123);
  $(".side_menu").slideToggle(300)
 })
 // Side menu end
 
 // Tab item start
-const tab_items = document.querySelectorAll(".tab_item");
 
 // Tab item end
 
