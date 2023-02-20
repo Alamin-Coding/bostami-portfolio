@@ -9,6 +9,10 @@ module.exports = {
         DEFAULT: '.5rem',
       },
     },
+    fontFamily: {
+      'poppins': ['Poppins', 'sans-serif'],
+      'roboto-slab': ['Roboto Slab', 'sans-serif']
+    },
     extend: {
       colors: {
         'primary' : '#FA5252',
