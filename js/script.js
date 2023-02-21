@@ -1,5 +1,7 @@
 $(function() {
  "use strict"
+
+
 // Dark mode start
 let darkmode = document.querySelector(".darkmode");
 let html = document.querySelector("html");
@@ -28,6 +30,8 @@ function handleDarkMode() {
 darkmode.addEventListener("click", handleDarkMode)
 // Dark mode end ===================
 
+
+
 // Menu start
 const menu = document.querySelectorAll(".menu li a");
 const menuArr = Array.from(menu);
@@ -35,7 +39,6 @@ const tab_itemArray = Array.from(document.querySelectorAll(".tab_item"));
 const sideMenusArray = Array.from(document.querySelectorAll(".side_menu ul li a"));
 const Home_info = document.querySelector(".Home_info");
 const main_section = document.querySelector(".main_section");
-// let bgStyle = "linear-gradient(to-right, red, blue)"
 
 // Tab item active function
 const tabItemActive = (index) => {
@@ -48,54 +51,95 @@ const tabItemActive = (index) => {
 
 
 
+
+// Big screen menu
 menuArr.map( (menu, index) => {
  menu.addEventListener("click", (e) => {
   menuArr.map(item => {
    item.classList.remove("active");
   })
-    e.currentTarget.classList.add("active");
+  sideMenusArray.map(item => {
+    item.classList.remove("active")
   })
-  tabItemActive(index)
+    e.currentTarget.classList.add("active");
+    sideMenusArray[index].classList.add("active");
+    tabItemActive(index)
+  })
 } )
 
 
 
 
+// Hide and show on Screen width 
+function handleAboutSection() {
+  Home_info.classList.add("hidden");
+  main_section.classList.remove("mt-40");
+}
 
-
-sideMenusArray.map((menu, index) => {
- menu.addEventListener("click", (e) => {
-  $(".side_menu").slideToggle(300)
-  sideMenusArray.map(item => {
-   item.classList.remove("active")
-  })
-  e.currentTarget.classList.add("active");
-  tabItemActive(index);
-  if (index === 0) {
+window.addEventListener("resize", function() {
+  let screenWidth = screen.width;
+  if (screenWidth > 1024) {
+    $(".side_menu").css("display", "none")
+  }
+  if (screenWidth > 1023) {
     Home_info.classList.remove("hidden");
     main_section.classList.add("mt-40");
-   }
-  if (index === 1) {
-    Home_info.classList.add("hidden");
-    main_section.classList.remove("mt-40");
-   }
-  if (index === 2) {
-    Home_info.classList.add("hidden");
-    main_section.classList.remove("mt-40");
-   }
-  if (index === 3) {
-    Home_info.classList.add("hidden");
-    main_section.classList.remove("mt-40");
-   }
-  if (index === 4) {
-    Home_info.classList.add("hidden");
-    main_section.classList.remove("mt-40");
-   }
-   
-  console.log(index);
- } );
- 
+  }
+  if(screenWidth < 1023 && sideMenusArray[1].classList.contains("active")){
+    handleAboutSection()
+  }
+  if(screenWidth < 1023 && sideMenusArray[2].classList.contains("active")){
+    handleAboutSection()
+  }
+  if(screenWidth < 1023 && sideMenusArray[3].classList.contains("active")){
+    handleAboutSection()
+  }
+  if(screenWidth < 1023 && sideMenusArray[4].classList.contains("active")){
+    handleAboutSection()
+  }
+
 })
+
+// Toggle menu start
+sideMenusArray.map((menu, index) => {
+  menu.addEventListener("click", (e) => {
+    $(".side_menu").slideToggle(300);
+
+    sideMenusArray.map(item => {
+      item.classList.remove("active")
+    })
+    menuArr.map(item => {
+      item.classList.remove("active")
+    })
+    e.currentTarget.classList.add("active");
+    menuArr[index].classList.add("active");
+    tabItemActive(index);
+    if (index === 0) {
+      Home_info.classList.remove("hidden");
+      main_section.classList.add("mt-40");
+    }
+    if (index === 1) {
+      Home_info.classList.add("hidden");
+      main_section.classList.remove("mt-40");
+    }
+    if (index === 2) {
+      Home_info.classList.add("hidden");
+      main_section.classList.remove("mt-40");
+    }
+    if (index === 3) {
+      Home_info.classList.add("hidden");
+      main_section.classList.remove("mt-40");
+    }
+    if (index === 4) {
+      Home_info.classList.add("hidden");
+      main_section.classList.remove("mt-40");
+    }
+    
+    // console.log(index);
+  } );
+  
+})
+// Toggle menu end
 
 $(".bars").click(function(e){
  $(".side_menu").slideToggle(300)
